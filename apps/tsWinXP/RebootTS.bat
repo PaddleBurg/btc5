@@ -3,7 +3,7 @@
 :: Перезагрузка компьютера с уведомлением активных сеансов от имени ...
 SET Admin="Ђ¤¬Ё­Ёбва в®а"
 :: Задержка в секундах
-SET /a WaitSec=180
+SET /a WaitSec=220
 
 If %WaitSec% LSS 0 GoTo :EOF
 If %WaitSec% GTR 999 GoTo :EOF
