@@ -21,7 +21,7 @@ Echo Џ®ЇлвЄ  ЇҐаҐ§ Јаг§ЄЁ ®Ў®«®зЄЁ EGUI
 ::If /I Not "%begin%"=="Y" Exit /b 0
 SetLocal EnableDelayedExpansion
 
-SET NodGUI=egui.exe
+SET NodGUI=egui.exe1
 SET NodDir="C:\Program Files\ESET Smart Security"
 SET TNodUP="C:\Drivers\TNod\TNODUP-Portable.exe"
 
