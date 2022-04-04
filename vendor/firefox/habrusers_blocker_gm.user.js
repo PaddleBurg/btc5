@@ -24,7 +24,7 @@
  */
 
 const fablers = [
-	'alizar',
+	'alizarxx',
 	'andorro',
 	'atomlib',
 	'Boomburum',
