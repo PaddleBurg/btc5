@@ -7,38 +7,38 @@ Option Explicit
 Const VERSION = "0.01.000"
 
 Sub CurrentDir(folder)
-	Dim file, TextStream, txt, newtxt, jaw
-	
+	Dim file, TextStream, txedittx, newtxedittx, jaw
+
 	For Each file In folder.Files
 	If EXT_SEARCH = fso.GetExtensionName(file) Then
-		newtxt = vbNullString
+		newtxedittx = vbNullString
 		Set TextStream = file.OpenAsTextStream(1)
 		While Not TextStream.AtEndOfStream
-			txt = TextStream.ReadLine() & vbCrLf
-			If InStr(txt, "Created with the Personal Edition") = 0 Then
-				newtxt = newtxt & txt
+			txedittx = TextStream.ReadLine() & vbCrLf
+			If InStr(txedittx, "Created with the Personal Edition") = 0 Then
+				newtxedittx = newtxedittx & txedittx
 			End If
 		Wend
 		TextStream.Close
-		
+
 		Set TextStream = fso.CreateTextFile(file, True)
-		TextStream.Write newtxt
+		TextStream.Write newtxedittx
 		TextStream.Close
 	End If
 	Next
-    
+
 	file = folder & "\js\hndsd.js"
-'	Set txt = CreateObject("VBScript.RegExp")
-'	txt.Global = True: txt.Pattern = "'[А-ЯЁ].{2,}'\[\["
+'	Set txedittx = CreateObject("VBScript.RegExp")
+'	txedittx.Global = True: txedittx.Pattern = "'[пїЅ-ЯЁ].{2,}'\[\["
 	If fso.FileExists(file) Then
 		Set TextStream = fso.GetFile(file).OpenAsTextStream(1)
-		txt = StrConv(TextStream.ReadAll(), "windows-1251", "UTF-8")
+		txedittx = StrConv(TextStream.ReadAll(), "windows-1251", "UTF-8")
 		TextStream.Close
-		
-		jaw = Split(txt, ";"): newtxt = Split(jaw(1), "=")
-		
+
+		jaw = Split(txedittx, ";"): newtxedittx = Split(jaw(1), "=")
+
 		Set TextStream = fso.CreateTextFile(file, True)
-		TextStream.Write StrConv(Replace(txt, newtxt(1), LCase(newtxt(1))), "UTF-8", "windows-1251")
+		TextStream.Write StrConv(Replace(txedittx, newtxedittx(1), LCase(newtxedittx(1))), "UTF-8", "windows-1251")
 		TextStream.Close
 	End If
 	If IsArray(jaw) Then

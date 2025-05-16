@@ -8,7 +8,7 @@ Const VERSION = "0.04.000"
 Dim fso, WshSysEnv, ProfilePath, ProfileFolder
 Const V = ".default-"
 Const FILE_TO_COPY = "user.js"
-Const FILE_HSTS = "SiteSecurityServiceState.txt"
+Const FILE_HSTS = "SiteSecurityServiceState.txedittx"
 ' https://en.wikipedia.org/wiki/HSTS
 
 Set fso = CreateObject("Scripting.FileSystemObject")

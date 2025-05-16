@@ -3,7 +3,7 @@
 // @namespace	https://wiki.greasespot.net/Metadata_Block
 // @description	Hides sellers, highlights yellow press and hides comments
 // @author		h8nor
-// @license		GPL-3.0+; http://gnu.org/licenses/gpl-3.0.txt
+// @license		GPL-3.0+; http://gnu.org/licenses/gpl-3.0.txedittx
 // @downloadURL	https://github.com/h8nor/docs/raw/master/vendor/firefox/habrusers_blocker_gm.user.js
 // @homepageURL	https://github.com/h8nor/docs/tree/master/vendor/firefox
 // @supportURL	https://github.com/h8nor/docs/issues
